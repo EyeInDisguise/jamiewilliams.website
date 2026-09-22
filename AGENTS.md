@@ -10,3 +10,5 @@
 - Run `npm run build` and `npm test` after changes. Check affected pages in a browser at phone and desktop widths.
 - Keep third-party font licenses with their assets. No tracking or third-party embeds without an explicit request.
 - Never commit credentials, private drafts, machine-specific paths, or test screenshots. Preserve `.openai/hosting.json` identity.
+
+- Write plainly in Jamie’s voice. Use specific project details; avoid slogans, forced whimsy, marketing language, and invented personality. Omit filler rather than replacing it with another tagline.

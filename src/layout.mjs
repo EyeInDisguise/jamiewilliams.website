@@ -14,6 +14,6 @@ ${page.script ? `<script type="module" src="${page.script}"></script>` : ''}</he
 <header class="site-header"><a class="identity" href="/" aria-label="Jamie Williams, home"><span class="monogram" aria-hidden="true">jw<span>_</span></span><span>Jamie Williams<span class="identity-note">Personal notebook & lab</span></span></a>
 <nav aria-label="Main">${nav.map(([path, label])=>`<a href="${path}"${page.path === path || (path !== '/' && page.path.startsWith(path)) ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav><a class="portfolio-link" href="${portfolio}">Game dev portfolio <span aria-hidden="true">↗</span></a></header>
 <main id="main" tabindex="-1">${page.body}</main>
-<footer class="site-footer"><a href="/" class="footer-name">Jamie Williams <span class="muted">/ a personal website</span></a><div><a href="${github}">GitHub ↗</a><a href="/about/#contact">Contact</a><a href="/colophon/">Colophon</a><a href="#main" aria-label="Back to top">↑</a></div><p class="footer-small">Games, code, and the bits in between.</p></footer>
+<footer class="site-footer"><a href="/" class="footer-name">Jamie Williams</a><div><a href="${github}">GitHub ↗</a><a href="/about/#contact">Contact</a><a href="/colophon/">Colophon</a><a href="#main" aria-label="Back to top">↑</a></div></footer>
 </div></body></html>`;
 }
