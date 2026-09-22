@@ -1,0 +1,12 @@
+# Project conventions
+
+- Edit `src/`, then run the build; `dist/` is generated and tracked for static hosting.
+- Preserve the separation between this personal notebook and the game-development portfolio.
+- Use verified project facts. Do not invent dates, outcomes, personal opinions, projects, credentials, or images. Publication dates are explicit, never derived from build time.
+- Keep pages semantic and readable without JavaScript. Add client JavaScript only for an interaction that needs it.
+- Preserve keyboard focus visibility, native controls, reduced-motion behaviour, and deliberate small-screen layouts.
+- Use the shared palette and type system. Prefer rules and typography to decorative effects or repeated cards.
+- The spring's static plot and animated marker must use the same mathematical model. Changes to it need boundary and behavioural tests.
+- Run `npm run build` and `npm test` after changes. Check affected pages in a browser at phone and desktop widths.
+- Keep third-party font licenses with their assets. No tracking or third-party embeds without an explicit request.
+- Never commit credentials, private drafts, machine-specific paths, or test screenshots. Preserve `.openai/hosting.json` identity.
