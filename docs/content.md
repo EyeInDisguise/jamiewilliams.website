@@ -10,4 +10,4 @@ Useful next additions:
 - A first VR entry with his role, the problem, and an actual artifact.
 - A personal revision of the Now page, including current games only if he wants to share them.
 
-The portfolio source confirms `jamiegamedev.me`; `jamiegevdev.me` in the original brief was a typo. At inspection, the personal domain served a basic Jekyll “HELLO” page over HTTP and had a certificate mismatch over HTTPS. Domain cutover and certificate status must be checked before claiming the new site is live there.
+The portfolio source confirms `jamiegamedev.me`; `jamiegevdev.me` in the original brief was a typo. At inspection, the personal domain served a basic Jekyll “HELLO” page over HTTP and had a certificate mismatch over HTTPS. The new build is published on a separate notebook branch in EyeInDisguise.github.io; the original main branch is preserved.

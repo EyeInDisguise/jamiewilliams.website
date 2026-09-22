@@ -31,7 +31,7 @@ Dates are written explicitly. Rebuilding must not make an old entry look updated
 
 ## Hosting
 
-Serve `dist/` at the domain root with directory indexes and `404.html` as the missing-page response. There is no server runtime or client router. `.openai/hosting.json` connects this checkout to its Sites deployment; it contains no credentials. GitHub Actions checks the build and tests without publishing automatically.
+Serve `dist/` at the domain root with directory indexes and `404.html` as the missing-page response. There is no server runtime or client router. `.openai/hosting.json` connects this checkout to its Sites deployment; it contains no credentials. The custom domain uses the `notebook` branch of `EyeInDisguise.github.io`, preserving its original `main` branch. See [publishing notes](docs/publishing.md). GitHub Actions checks the build and tests without publishing automatically.
 
 ## Type
 
