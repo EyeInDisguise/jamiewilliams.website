@@ -28,8 +28,8 @@ test('local links, fragment targets, and assets resolve in the generated site', 
     }
   }
 });
-test('homepage has no client scripts and font budget stays below 80 KB', () => {
-  assert.ok(!layout(pages[0]).includes('<script'));
+test('only pages with the ability selector load its script, and font budget stays below 80 KB', () => {
+  assert.deepEqual(pages.filter(page => page.script).map(page => page.path), ['/', '/lab/rfid/']);
   const fontBytes = ['public-sans.woff2','plex-mono.woff2'].reduce((sum,name) => sum + statSync(`src/assets/fonts/${name}`).size,0);
   assert.ok(fontBytes < 80000, `Font budget exceeded: ${fontBytes}`);
 });

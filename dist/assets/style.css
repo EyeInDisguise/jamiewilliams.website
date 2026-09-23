@@ -1246,3 +1246,53 @@ input[type=range] {
  .personal-project .section-heading { flex-wrap:wrap; gap:12px; }
  .personal-links { margin:40px 0 50px; }
 }
+
+/* RFID input path. The four labels are real game abilities; the animation is site UI. */
+.project-feature { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); align-items:start; gap:clamp(28px,5vw,70px); }
+.project-feature-copy { min-width:0; }
+.project-feature .project-links { border-left:0; padding:24px 0 0; margin-top:24px; }
+.project-feature .project-links a { padding:13px 0; }
+.ability-panel { min-width:0; padding:24px; border:1px solid #596149; background:var(--surface); }
+.ability-top { display:flex; justify-content:space-between; gap:16px; font:.75rem/1.5 var(--mono); letter-spacing:.06em; color:var(--muted); }
+.ability-current { display:flex; justify-content:space-between; align-items:baseline; gap:15px; min-height:105px; padding:21px 0 14px; font-size:clamp(2.25rem,4vw,3.3rem); font-weight:600; line-height:1.13; letter-spacing:-.055em; color:var(--accent); }
+.ability-current-mark { font:1.5rem/1 var(--mono); }
+.signal-map { display:grid; grid-template-columns:auto minmax(6px,1fr) auto minmax(6px,1fr) auto minmax(6px,1fr) auto; align-items:center; gap:8px; padding:19px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); font:.6875rem/1.4 var(--mono); color:var(--muted); }
+.signal-map i { position:relative; height:1px; background:#667053; overflow:hidden; }
+.signal-map i::after { content:''; position:absolute; inset:0; background:var(--accent); transform:scaleX(0); transform-origin:left; }
+.ability-options { display:none; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:23px; }
+.ability-panel[data-ready] .ability-options { display:grid; }
+.ability-options button { min-height:48px; display:flex; align-items:center; gap:12px; padding:10px 12px; text-align:left; border:1px solid var(--line); background:transparent; color:var(--ink); border-radius:0; font-size:.875rem; line-height:1.4; }
+.ability-options button span { font:.6875rem/1.4 var(--mono); color:var(--muted); }
+.ability-options button[aria-pressed=true] { border-color:var(--accent); background:#cadb7c14; }
+.ability-options button[aria-pressed=true] span { color:var(--accent); }
+.ability-explainer { font-size:.8125rem; line-height:1.6; color:var(--muted); margin:19px 0 0; }
+.project-facts + .ability-panel { max-width:860px; margin:0 0 60px; }
+.project-facts + .ability-panel .ability-current { min-height:125px; }
+.project-facts + .ability-panel .ability-options { grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+ .site-header nav a::before { content:''; position:absolute; left:0; right:0; bottom:2px; height:1px; background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .18s ease-out; }
+ .site-header nav a:hover::before, .site-header nav a:focus-visible::before { transform:scaleX(1); }
+ .project-links a span, .personal-links a span, .contact-links a span, .experiment-row .row-arrow { transition:transform .18s ease-out; }
+ .project-links a:hover span, .project-links a:focus-visible span, .personal-links a:hover span, .personal-links a:focus-visible span, .contact-links a:hover span, .contact-links a:focus-visible span, .experiment-row:hover .row-arrow, .experiment-row:focus-visible .row-arrow { transform:translateX(4px); }
+ .ability-options button { transition:background-color .18s ease-out,border-color .18s ease-out,transform .18s ease-out; }
+ .ability-options button:hover { transform:translateY(-2px); border-color:#9aad6d; }
+}
+@media(prefers-reduced-motion:no-preference) {
+ .ability-switched .signal-map i::after { animation:signal-pass .24s ease-out both; }
+ .ability-switched .signal-map i:nth-of-type(2)::after { animation-delay:.08s; }
+ .ability-switched .signal-map i:nth-of-type(3)::after { animation-delay:.16s; }
+ .ability-switched .ability-current-mark { animation:mark-tick .2s ease-out; }
+}
+@keyframes signal-pass { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+@keyframes mark-tick { from { transform:translateX(-6px); opacity:.35; } to { transform:translateX(0); opacity:1; } }
+@media(max-width:700px) {
+ .project-feature { grid-template-columns:1fr; }
+ .ability-panel { padding:18px; }
+ .ability-current { min-height:95px; }
+ .project-facts + .ability-panel .ability-options { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .signal-map { gap:5px; font-size:.625rem; }
+}
+@media(max-width:350px) {
+ .signal-map { font-size:.5625rem; }
+ .ability-options button { gap:7px; padding:8px; }
+}

@@ -17,8 +17,9 @@ Open `http://127.0.0.1:4173`. Rebuild and reload after editing source. Run `npm 
 
 - `src/pages.mjs` — homepage
 - `src/detail-pages.mjs` — project and about pages, site details, and 404
+- `src/ability-selector.mjs` — shared RFID ability selector markup
 - `src/layout.mjs` — shared document, navigation, and footer
-- `src/assets/` — styles, locally hosted fonts, and favicon
+- `src/assets/` — styles, locally hosted fonts, favicon, and ability selector interaction
 - `scripts/` — static build and local preview
 - `dist/` — generated site, committed so it can be served without a build service
 
