@@ -9,7 +9,7 @@ export function layout(page) {
 <meta name="theme-color" content="#191b18"><meta name="color-scheme" content="dark">
 <meta property="og:title" content="${esc(page.title)} — Jamie Williams"><meta property="og:description" content="${esc(page.description)}"><meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/style.css">
-${page.script ? `<script type="module" src="${page.script}"></script>` : ''}</head>
+<script type="module" src="/assets/site-interactions.js"></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><div class="site-shell">
 <header class="site-header"><a class="identity" href="/" aria-label="Jamie Williams, home"><span class="monogram" aria-hidden="true">jw<span>_</span></span><span>Jamie Williams</span></a>
 <nav aria-label="Main">${nav.map(([path, label])=>`<a href="${path}"${page.path === path || (path !== '/' && page.path.startsWith(path)) ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</nav><a class="portfolio-link" href="${portfolio}">Game dev portfolio <span aria-hidden="true">↗</span></a></header>

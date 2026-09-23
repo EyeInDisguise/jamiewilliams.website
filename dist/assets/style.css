@@ -1296,3 +1296,56 @@ input[type=range] {
  .signal-map { font-size:.5625rem; }
  .ability-options button { gap:7px; padding:8px; }
 }
+
+/* The controller path advances with the reader's scroll position. */
+.controller-story { --story-progress:0; border-top:1px solid var(--line); margin:18px 0 88px; }
+.story-heading { padding:48px 0 36px; }
+.story-heading .eyebrow { color:var(--accent); }
+.story-heading h2 { font-size:clamp(2.5rem,5vw,4.5rem); margin:16px 0 10px; }
+.story-heading p { color:var(--muted); margin:0; }
+.story-grid { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1fr); gap:clamp(38px,8vw,120px); align-items:start; }
+.story-display { min-width:0; min-height:390px; padding:30px; border:1px solid #596149; background:var(--surface); display:flex; flex-direction:column; justify-content:space-between; }
+.controller-story[data-ready] .story-display { position:sticky; top:clamp(24px,11vh,120px); }
+.story-display-head,.story-track-labels { display:flex; justify-content:space-between; gap:12px; color:var(--muted); font:.75rem/1.5 var(--mono); letter-spacing:.04em; }
+.story-readout { display:flex; flex-direction:column; gap:4px; padding:34px 0; }
+.story-readout strong { font:600 clamp(5rem,9vw,8.75rem)/.95 var(--sans); letter-spacing:-.085em; color:var(--accent); }
+.story-readout span { font-size:clamp(1.5rem,3vw,2.5rem); line-height:1.15; font-weight:600; letter-spacing:-.04em; }
+.story-track { height:2px; background:#596149; overflow:hidden; margin-bottom:16px; }
+.story-track span { display:block; width:100%; height:100%; background:var(--accent); transform:scaleX(var(--story-progress)); transform-origin:left; }
+.story-track-labels { font-size:.6875rem; }
+.story-steps { min-width:0; }
+.story-step { min-height:56vh; display:flex; flex-direction:column; justify-content:center; border-top:1px solid var(--line); padding:38px 0; opacity:.54; }
+.story-step:last-child { border-bottom:1px solid var(--line); }
+.story-step[data-active] { opacity:1; border-top-color:var(--accent); }
+.story-step .eyebrow { color:var(--accent); }
+.story-step h3 { font-size:clamp(2rem,4vw,3.5rem); margin:20px 0 15px; }
+.story-step p { max-width:31ch; color:var(--muted); font-size:1.0625rem; line-height:1.7; }
+.controller-story:not([data-ready]) .story-step { opacity:1; }
+
+/* A small inspection reticle follows fine pointers. The native cursor stays in place. */
+.cursor-reticle { display:none; position:fixed; z-index:100; inset:0 auto auto 0; width:21px; height:21px; border:1px solid var(--accent); box-shadow:0 0 0 5px #cadb7c12; pointer-events:none; opacity:0; transition:opacity .12s ease,width .16s ease,height .16s ease,background-color .16s ease; will-change:transform; }
+.cursor-reticle::before { content:''; position:absolute; top:50%; left:50%; width:3px; height:3px; background:var(--accent); transform:translate(-50%,-50%); }
+.cursor-reticle::after { content:''; position:absolute; top:-4px; left:-4px; width:7px; height:7px; border-top:1px solid var(--accent); border-left:1px solid var(--accent); }
+@media(pointer:fine) and (hover:hover) and (prefers-reduced-motion:no-preference) {
+ .cursor-reticle[data-enabled] { display:block; }
+ .cursor-reticle[data-visible] { opacity:1; }
+ .cursor-reticle[data-action] { width:28px; height:28px; background:#cadb7c16; }
+}
+@media(max-width:700px) {
+ .controller-story { margin:12px 0 58px; }
+ .story-heading { padding:36px 0 27px; }
+ .story-grid { display:block; }
+ .story-display { min-height:220px; padding:19px; margin-bottom:20px; }
+ .controller-story[data-ready] .story-display { top:0; z-index:2; min-height:195px; }
+ .story-readout { flex-direction:row; align-items:baseline; gap:23px; padding:18px 0; }
+ .story-readout strong { font-size:4.75rem; }
+ .story-readout span { font-size:1.75rem; }
+ .story-step { min-height:46vh; padding:30px 0; }
+ .story-step h3 { margin:13px 0 8px; }
+ .story-step p { font-size:1rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .story-display { display:none; }
+ .story-step { min-height:0; opacity:1; }
+ .cursor-reticle { display:none!important; }
+}
