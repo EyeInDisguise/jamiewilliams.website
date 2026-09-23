@@ -1228,3 +1228,21 @@ input[type=range] {
     display:none;
   }
 }
+/* The project itself carries the homepage, without a substitute demo. */
+.intro-copy a:not(.text-link), .archive-footnote a { text-decoration:underline; text-underline-offset:4px; }
+.project-feature { display:grid; grid-template-columns:1.5fr 1fr; gap:64px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:38px 0 44px; }
+.project-feature h2 { font-size:clamp(2rem,4vw,3rem); margin:18px 0 24px; }
+.project-feature p { max-width:540px; }
+.project-links { align-self:center; border-left:1px solid var(--line); padding-left:32px; }
+.project-links a { display:flex; justify-content:space-between; gap:20px; padding:20px 0; border-bottom:1px solid var(--line); }
+.project-links p { font: .875rem/1.8 var(--mono); color:var(--muted); margin:22px 0 0; }
+.personal-links { margin:58px 0 70px; max-width:720px; }
+.personal-links h2 { font-size:1.125rem; margin-bottom:20px; }
+.personal-links a { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px; padding:18px 0; border-top:1px solid var(--line); }
+.personal-links span { color:var(--muted); font-size:.875rem; }
+@media(max-width:700px) {
+ .project-feature { grid-template-columns:1fr; gap:24px; padding:28px 0; }
+ .project-links { padding:0; border-left:0; }
+ .personal-project .section-heading { flex-wrap:wrap; gap:12px; }
+ .personal-links { margin:40px 0 50px; }
+}

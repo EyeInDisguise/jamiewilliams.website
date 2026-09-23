@@ -1,7 +1,8 @@
-import { mkdir, writeFile, cp } from 'node:fs/promises';
+import { mkdir, writeFile, cp, rm } from 'node:fs/promises';
 import { pages } from '../src/pages.mjs';
 import { layout } from '../src/layout.mjs';
 
+await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
 await cp('src/assets', 'dist/assets', { recursive: true });
 await cp('src/assets/CNAME', 'dist/CNAME');

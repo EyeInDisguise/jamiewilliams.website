@@ -6,9 +6,9 @@
 - Keep pages semantic and readable without JavaScript. Add client JavaScript only for an interaction that needs it.
 - Preserve keyboard focus visibility, native controls, reduced-motion behaviour, and deliberate small-screen layouts.
 - Use the shared palette and type system. Prefer rules and typography to decorative effects or repeated cards.
-- The spring's static plot and animated marker must use the same mathematical model. Changes to it need boundary and behavioural tests.
 - Run `npm run build` and `npm test` after changes. Check affected pages in a browser at phone and desktop widths.
 - Keep third-party font licenses with their assets. No tracking or third-party embeds without an explicit request.
 - Never commit credentials, private drafts, machine-specific paths, or test screenshots. Preserve `.openai/hosting.json` identity.
 
 - Write plainly in Jamie’s voice. Use specific project details; avoid slogans, forced whimsy, marketing language, and invented personality. Omit filler rather than replacing it with another tagline.
+- Do not add assistant-created demo projects or notes as Jamie’s work. Keep project descriptions grounded in his existing projects.

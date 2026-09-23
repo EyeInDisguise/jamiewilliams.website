@@ -1,6 +1,6 @@
 # jamiewilliams.website
 
-My personal notebook and development lab. Experiments, short technical references, and work in progress live here; selected game-development work lives at [jamiegamedev.me](https://jamiegamedev.me).
+My personal website, with a few details about me and my projects. More game-development work lives at [jamiegamedev.me](https://jamiegamedev.me).
 
 ## Run locally
 
@@ -16,18 +16,17 @@ Open `http://127.0.0.1:4173`. Rebuild and reload after editing source. Run `npm 
 ## Structure
 
 - `src/pages.mjs` — homepage
-- `src/detail-pages.mjs` — lab entries, reading pages, and 404
-- `src/content.mjs` — archive metadata
+- `src/detail-pages.mjs` — project and about pages, site details, and 404
 - `src/layout.mjs` — shared document, navigation, and footer
-- `src/assets/` — styles, locally hosted fonts, and spring experiment
+- `src/assets/` — styles, locally hosted fonts, and favicon
 - `scripts/` — static build and local preview
 - `dist/` — generated site, committed so it can be served without a build service
 
-The spring study uses the analytic response of a damped linear spring. Tests check its initial conditions, long-term behaviour, critical transition, and differential equation, along with internal links and page metadata.
+Tests check page metadata, internal links, fragments, asset references, and the font budget.
 
 ## Content
 
-Dates are written explicitly. Rebuilding must not make an old entry look updated. The RFID entry is based on the existing [project README](https://github.com/EyeInDisguise/Jamie-Hackathon-2026), and intentionally leaves room for real footage. See [content notes](docs/content.md) for the remaining material.
+Project descriptions use verified material from my existing work. The RFID page is based on its [README](https://github.com/EyeInDisguise/Jamie-Hackathon-2026). The site was built with Codex assistance. Demo projects and articles created for the initial site have been removed; they weren’t my existing work.
 
 ## Hosting
 

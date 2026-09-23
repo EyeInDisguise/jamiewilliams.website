@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Jamie Williams’s personal notebook and development lab.",
+  "description": "Jamie Williams’s personal website.",
   "engines": { "node": ">=22" },
   "scripts": {
     "build": "node scripts/build.mjs",

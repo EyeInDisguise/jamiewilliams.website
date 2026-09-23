@@ -1,13 +1,7 @@
-# Content to add
+# Content
 
-The first edition includes only supplied biography, verified RFID project material, a newly built spring experiment, its technical reference, and notes on the website itself.
+The homepage features Jamie’s RFID platformer. Biography uses the supplied computer science, Unity/C#, gameplay programming, VR, and Unreal/C++ interests. Do not invent hobbies, preferences, opinions, or personal anecdotes.
 
-Useful next additions:
+The initial spring demo and damping article were created by the assistant and have been removed at Jamie’s request. The website is no longer listed as a separate project. Notes stays empty until Jamie supplies writing; Notes and Now are not in the main navigation.
 
-- A short recording of an RFID token selecting an ability while the game is visible.
-- A gameplay clip that matches the currently published Unity build.
-- Jamie’s account of one specific failure, what changed, and what he learned. Those details should come from him, not inference from the finished code.
-- A first VR entry with his role, the problem, and an actual artifact.
-- A personal revision of the Now page, including current games only if he wants to share them.
-
-The portfolio source confirms `jamiegamedev.me`; `jamiegevdev.me` in the original brief was a typo. At inspection, the personal domain served a basic Jekyll “HELLO” page over HTTP and had a certificate mismatch over HTTPS. The new build is published on a separate notebook branch in EyeInDisguise.github.io; the original main branch is preserved.
+Useful future material: actual game footage, Jamie’s own dev notes, and other verified projects. No placeholder screenshots or fictional entries.
