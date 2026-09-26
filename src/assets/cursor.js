@@ -27,7 +27,7 @@ function sync() {
 }
 
 document.addEventListener('pointermove', event => {
-  if (!cursor.hasAttribute('data-enabled') || event.pointerType !== 'mouse') {
+  if (!cursor.hasAttribute('data-enabled') || event.pointerType !== 'mouse' || document.documentElement.hasAttribute('data-bonus-open')) {
     hide();
     return;
   }

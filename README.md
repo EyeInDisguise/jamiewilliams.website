@@ -15,7 +15,7 @@ Open `http://127.0.0.1:4173`. After editing `src/`, rebuild and reload. Run `npm
 
 ## How it works
 
-The build script turns the page templates in `src/` into static files in `dist/`. Navigation, writing, and links work without JavaScript. The small scripts in `src/assets/` handle the ability selector, scroll sequence, and cursor reticle.
+The build script turns the page templates in `src/` into static files in `dist/`. Navigation, writing, and links work without JavaScript. The small scripts in `src/assets/` handle the ability selector, scroll sequence, cursor, and a couple of hidden extras.
 
 The RFID project page is based on my [project repository](https://github.com/EyeInDisguise/Jamie-Hackathon-2026). The browser build is linked from the site.
 
