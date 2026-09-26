@@ -1322,11 +1322,12 @@ input[type=range] {
 .story-step p { max-width:31ch; color:var(--muted); font-size:1.0625rem; line-height:1.7; }
 .controller-story:not([data-ready]) .story-step { opacity:1; }
 
-/* A small inspection reticle follows fine pointers. The native cursor stays in place. */
+/* A small inspection reticle replaces the native cursor on fine pointers. */
 .cursor-reticle { display:none; position:fixed; z-index:100; inset:0 auto auto 0; width:21px; height:21px; border:1px solid var(--accent); box-shadow:0 0 0 5px #cadb7c12; pointer-events:none; opacity:0; transition:opacity .12s ease,width .16s ease,height .16s ease,background-color .16s ease; will-change:transform; }
 .cursor-reticle::before { content:''; position:absolute; top:50%; left:50%; width:3px; height:3px; background:var(--accent); transform:translate(-50%,-50%); }
 .cursor-reticle::after { content:''; position:absolute; top:-4px; left:-4px; width:7px; height:7px; border-top:1px solid var(--accent); border-left:1px solid var(--accent); }
 @media(pointer:fine) and (hover:hover) and (prefers-reduced-motion:no-preference) {
+ html[data-custom-cursor],html[data-custom-cursor] * { cursor:none!important; }
  .cursor-reticle[data-enabled] { display:block; }
  .cursor-reticle[data-visible] { opacity:1; }
  .cursor-reticle[data-action] { width:28px; height:28px; background:#cadb7c16; }

@@ -12,25 +12,42 @@ let y = 0;
 function sync() {
   const enabled = pointer.matches && !reducedMotion.matches;
   cursor.toggleAttribute('data-enabled', enabled);
-  if (!enabled) cursor.removeAttribute('data-visible');
+  if (!enabled) {
+    cursor.removeAttribute('data-visible');
+    document.documentElement.removeAttribute('data-custom-cursor');
+  }
 }
 
 document.addEventListener('pointermove', event => {
-  if (!cursor.hasAttribute('data-enabled') || event.pointerType !== 'mouse') return;
-  x = event.clientX + 17;
-  y = event.clientY + 17;
+  if (!cursor.hasAttribute('data-enabled') || event.pointerType !== 'mouse') {
+    cursor.removeAttribute('data-visible');
+    document.documentElement.removeAttribute('data-custom-cursor');
+    return;
+  }
+  x = event.clientX;
+  y = event.clientY;
   cursor.toggleAttribute('data-action', !!event.target.closest('a, button, summary'));
-  cursor.setAttribute('data-visible', '');
+  if (!cursor.hasAttribute('data-visible')) {
+    cursor.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+    cursor.setAttribute('data-visible', '');
+  }
+  document.documentElement.setAttribute('data-custom-cursor', '');
   if (!frame) frame = requestAnimationFrame(() => {
-    cursor.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    cursor.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
     frame = 0;
   });
 }, { passive: true });
 
 document.addEventListener('pointerout', event => {
-  if (!event.relatedTarget) cursor.removeAttribute('data-visible');
+  if (!event.relatedTarget) {
+    cursor.removeAttribute('data-visible');
+    document.documentElement.removeAttribute('data-custom-cursor');
+  }
 });
-addEventListener('blur', () => cursor.removeAttribute('data-visible'));
+addEventListener('blur', () => {
+  cursor.removeAttribute('data-visible');
+  document.documentElement.removeAttribute('data-custom-cursor');
+});
 pointer.addEventListener('change', sync);
 reducedMotion.addEventListener('change', sync);
 sync();
