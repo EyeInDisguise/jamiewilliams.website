@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1400" role="img" aria-label="A quiet landscape beyond a stone arch">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.18" y2="1"><stop stop-color="#1a2427"/><stop offset=".42" stop-color="#33403d"/><stop offset=".78" stop-color="#60655b"/><stop offset="1" stop-color="#989482"/></linearGradient>
+    <radialGradient id="moonlight"><stop stop-color="#f3ead2" stop-opacity=".82"/><stop offset=".2" stop-color="#d9ceb2" stop-opacity=".28"/><stop offset="1" stop-color="#d9ceb2" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#444c48"/><stop offset="1" stop-color="#151b1b"/></linearGradient>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".075"/></feComponentTransfer></filter>
+  </defs>
+  <rect width="1200" height="1400" fill="url(#sky)"/>
+  <ellipse cx="652" cy="340" rx="480" ry="490" fill="url(#moonlight)"/>
+  <circle cx="652" cy="323" r="60" fill="#e2dcc8" opacity=".79"/>
+  <circle cx="652" cy="323" r="84" fill="none" stroke="#e2dcc8" stroke-opacity=".23"/>
+  <circle cx="652" cy="323" r="132" fill="none" stroke="#e2dcc8" stroke-opacity=".10"/>
+  <g fill="#e6dfca" opacity=".48"><circle cx="167" cy="224" r="2"/><circle cx="281" cy="351" r="1.5"/><circle cx="389" cy="147" r="2"/><circle cx="888" cy="171" r="1.5"/><circle cx="1041" cy="283" r="2"/><circle cx="996" cy="483" r="1.3"/><circle cx="143" cy="500" r="1.4"/><circle cx="802" cy="508" r="1.2"/></g>
+  <path d="M0 882C191 755 310 822 475 721c117-71 180-50 282-24 157 40 275-77 443-58v761H0Z" fill="#545e59" opacity=".48"/>
+  <path d="M0 958c178-106 279-65 409-104 102-31 156-110 260-109 94 2 156 73 277 43 95-24 167-29 254 2v610H0Z" fill="#394442" opacity=".76"/>
+  <path d="M0 1070c152-83 276-34 415-48 129-13 202-96 335-91 164 6 291 70 450 35v434H0Z" fill="url(#ground)"/>
+  <path d="M0 1185c197-36 344 29 518 10 187-21 284-91 454-61 85 15 165 46 228 52v214H0Z" fill="#1b2423"/>
+  <path d="M0 1237c183-20 294 64 462 37 138-22 224-83 366-68 120 13 238 73 372 54" fill="none" stroke="#a1a596" stroke-opacity=".22" stroke-width="2"/>
+  <path d="M0 1271c183-20 294 64 462 37 138-22 224-83 366-68 120 13 238 73 372 54M0 1303c183-20 294 64 462 37 138-22 224-83 366-68 120 13 238 73 372 54" fill="none" stroke="#a1a596" stroke-opacity=".13" stroke-width="2"/>
+  <g fill="none" stroke="#151d1c" stroke-linecap="round"><path d="M991 996V694m0 71-45-95m45 72 47-104m-47 132-82-71m82 31 75-101" stroke-width="12"/><path d="M1056 1055V777m0 61-31-75m31 61 50-88m-50 135-65-64m65 29 51-57" stroke-width="9"/><path d="M181 1090V835m0 67-41-89m41 72 56-82m-56 125-61-50m61 13 62-48" stroke-width="8"/></g>
+  <g fill="#17201e"><path d="M920 704c17-65 64-77 87-129-15 59-40 86-87 129Z"/><path d="M986 669c31-79 66-82 76-127-2 56-25 91-76 127Z"/><path d="M1048 778c32-85 69-88 84-137-7 58-35 102-84 137Z"/><path d="M151 839c-23-69-58-73-72-109 5 52 24 85 72 109Z"/></g>
+  <path d="M516 1178c40-100 83-196 94-343l7-154h18l7 154c12 151 45 243 88 343Z" fill="#1b2422"/>
+  <path d="M595 676h61v21h-61zM606 645h39v34h-39z" fill="#1b2422"/>
+  <path d="M617 646V538m-30 105h78" fill="none" stroke="#1b2422" stroke-width="9"/>
+  <path d="M628 760v283" fill="none" stroke="#a7aa98" stroke-opacity=".23" stroke-width="2"/>
+  <path d="M440 1400c61-116 80-210 181-231 77 26 106 126 145 231" fill="none" stroke="#a4a496" stroke-opacity=".14" stroke-width="2"/>
+  <rect width="1200" height="1400" filter="url(#grain)" opacity=".85"/>
+</svg>

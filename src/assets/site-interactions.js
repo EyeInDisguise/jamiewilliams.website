@@ -1,4 +1,4 @@
 import './ability-selector.js';
-import './scroll-story.js';
-import './cursor.js?v=eggs-1';
-import './easter-eggs.js?v=eggs-1';
+import './threshold.js?v=archive-1';
+import './cursor.js?v=archive-1';
+import './easter-eggs.js?v=archive-1';

@@ -32,6 +32,6 @@ test('shared interactions are loaded once per page, and font budget stays below 
   for (const page of pages) {
     assert.equal((layout(page).match(/site-interactions\.js/g) || []).length, 1, page.path);
   }
-  const fontBytes = ['public-sans.woff2','plex-mono.woff2'].reduce((sum,name) => sum + statSync(`src/assets/fonts/${name}`).size,0);
+  const fontBytes = ['cormorant-roman.woff2','cormorant-italic.woff2','plex-mono.woff2'].reduce((sum,name) => sum + statSync(`src/assets/fonts/${name}`).size,0);
   assert.ok(fontBytes < 80000, `Font budget exceeded: ${fontBytes}`);
 });

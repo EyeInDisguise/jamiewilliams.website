@@ -1,6 +1,6 @@
 # jamiewilliams.website
 
-My personal website. It has a page for my RFID platformer and some smaller details about what I work on. My [game development portfolio](https://jamiegamedev.me) has more of my projects.
+My personal website, with notes, experiments, and a few things I like. My [game development portfolio](https://jamiegamedev.me) is where I keep the game projects.
 
 ## Run it locally
 
@@ -15,11 +15,11 @@ Open `http://127.0.0.1:4173`. After editing `src/`, rebuild and reload. Run `npm
 
 ## How it works
 
-The build script turns the page templates in `src/` into static files in `dist/`. Navigation, writing, and links work without JavaScript. The small scripts in `src/assets/` handle the ability selector, scroll sequence, cursor, and a couple of hidden extras.
+The build script turns the page templates in `src/` into static files in `dist/`. Navigation, writing, and links work without JavaScript. The small scripts in `src/assets/` handle the opening doors, cursor, ability selector, and a couple of hidden extras.
 
 The RFID project page is based on my [project repository](https://github.com/EyeInDisguise/Jamie-Hackathon-2026). The browser build is linked from the site.
 
-Public Sans and IBM Plex Mono are hosted locally with their font licences in `src/assets/fonts/`.
+Cormorant Garamond and IBM Plex Mono are hosted locally with their font licences in `src/assets/fonts/`. The landscape is an original SVG in `src/assets/`. [Design notes](docs/design.md) explain the visual direction and references.
 
 ## Publishing
 
